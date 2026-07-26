@@ -1,104 +1,48 @@
-# 🧠 MNIST Denoising Autoencoder
+# MNIST Denoising Autoencoder
 
-A deep learning project that removes noise from handwritten digit images using **Autoencoders**, trained and evaluated on the **MNIST** dataset using **PyTorch**.
+A deep learning project that removes noise from handwritten digit images using autoencoders, trained and evaluated on the MNIST dataset.
 
----
+## What this does
 
-## ✨ Features
+1. Loads and preprocesses the MNIST dataset.
+2. Adds artificial Gaussian noise to create noisy versions of the images.
+3. Trains three different autoencoder architectures to reconstruct clean images from the noisy inputs:
+   - **FFNN Autoencoder** — simple linear encoder/decoder.
+   - **Transpose CNN Autoencoder** — convolutional encoder, transposed-convolution decoder.
+   - **Upsampled CNN Autoencoder** — convolutional encoder, nearest-neighbor upsampling + convolution decoder.
+4. Evaluates each model on the test set and visualizes Original / Noisy / Denoised images side by side.
 
-- 📥 Loads and preprocesses the MNIST dataset
-- 🎲 Adds artificial Gaussian noise to handwritten digit images
-- 🧠 Trains **three different Autoencoder architectures**
-- 📊 Compares reconstruction performance across models
-- 🖼️ Visualizes **Original → Noisy → Denoised** images
-- 💾 Automatically saves trained model weights
+## Requirements
 
----
+- Python 3.8+
+- `torch`
+- `torchvision`
+- `numpy`
+- `matplotlib`
 
-## 🚀 Autoencoder Architectures
-
-| Model | Description |
-| :--- | :--- |
-| **FFNN Autoencoder** | Simple fully connected encoder-decoder network |
-| **Transpose CNN Autoencoder** | Convolutional encoder with transposed convolution decoder |
-| **Upsampled CNN Autoencoder** | Convolutional encoder with nearest-neighbor upsampling and convolution decoder |
-
----
-
-## ⚙️ Requirements
-
-- Python **3.8+**
-- PyTorch
-- Torchvision
-- NumPy
-- Matplotlib
-
-Install dependencies:
-
+Install with:
 ```bash
 pip install torch torchvision numpy matplotlib
 ```
 
----
+## How to run
 
-## ▶️ How to Run
+1. Open `autoencoder_mnist.ipynb` in Jupyter Notebook, JupyterLab, or VS Code.
+2. Run all cells top to bottom.
+3. The MNIST dataset is downloaded automatically on first run — no manual setup needed.
+4. Trained model weights (`.pth` files) are saved automatically during training.
+5. Training all three models for 20 epochs each takes a few minutes on CPU, faster on GPU.
 
-1. Open **`autoencoder_mnist.ipynb`** in:
-   - Jupyter Notebook
-   - JupyterLab
-   - VS Code
+No files need to be downloaded or prepared beforehand — the notebook is self-contained.
 
-2. Run all notebook cells from top to bottom.
+## Results
 
-3. The **MNIST dataset** is downloaded automatically during the first run.
+See the **Observations & Analysis** section at the end of the notebook for a full write-up, including a comparison of validation loss across all three models and notes on challenges encountered during training.
 
-4. Model weights (`.pth`) are saved automatically after training.
+## Files
 
-5. Training all three models for **20 epochs** takes only a few minutes on CPU and is significantly faster on GPU.
-
-> **No manual dataset download is required.** Everything is handled automatically.
-
----
-
-## 📈 Results
-
-The notebook concludes with an **Observations & Analysis** section containing:
-
-- Validation loss comparison for all three models
-- Visual comparison of denoised outputs
-- Performance discussion
-- Challenges encountered during training
-
----
-
-## 📂 Project Structure
-
-| File / Folder | Description |
-| :--- | :--- |
-| `autoencoder_mnist.ipynb` | Main notebook containing preprocessing, training, evaluation, and visualization |
-| `data/` *(auto-generated)* | Downloaded MNIST dataset |
-| `*.pth` *(auto-generated)* | Saved model weights |
-
----
-
-## 🛠️ Built With
-
-- **Python**
-- **PyTorch**
-- **Torchvision**
-- **NumPy**
-- **Matplotlib**
-
----
-
-## 📸 Output
-
-The notebook displays side-by-side comparisons of:
-
-**Original Image → Noisy Image → Reconstructed (Denoised) Image**
-
-for each trained autoencoder model.
-
----
-
-⭐ If you found this project useful, consider giving it a **star**!
+| File | Description |
+|---|---|
+| `autoencoder_mnist.ipynb` | Main notebook — all code, training, and results. |
+| `data/` *(auto-generated)* | MNIST dataset, downloaded automatically. |
+| `*.pth` *(auto-generated)* | Saved model weights after training. |

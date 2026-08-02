@@ -1,0 +1,41 @@
+Priya Sharma
+Data Scientist | Chandigarh, India
+
+Summary
+Priya is a data scientist with 4 years of experience building machine learning
+systems for e-commerce and fintech companies. She specializes in natural
+language processing, recommendation systems, and MLOps.
+
+Education
+- M.Tech in Computer Science, Panjab University (2019-2021)
+- B.E. in Information Technology, PEC Chandigarh (2015-2019)
+
+Work Experience
+
+Senior Data Scientist, FinEdge Analytics (2022 - Present)
+Priya leads a team of three engineers building fraud-detection models for a
+digital payments platform. She designed a gradient-boosted ensemble that
+reduced false-positive fraud alerts by 32% while maintaining recall above 95%.
+She also built an internal RAG-based knowledge assistant that lets analysts
+query internal compliance documents in natural language, cutting average
+ticket resolution time from 45 minutes to 12 minutes.
+
+Data Scientist, ShopKart Technologies (2021 - 2022)
+Priya built a product recommendation engine using collaborative filtering and
+transformer-based embeddings, which increased click-through rate on the
+homepage carousel by 18%. She also owned the A/B testing framework used
+across the growth team.
+
+Skills
+Programming languages: Python, SQL, Scala
+Machine learning: scikit-learn, PyTorch, XGBoost, sentence-transformers
+Data engineering: Airflow, Spark, dbt
+Cloud: AWS (SageMaker, Lambda, S3), GCP (Vertex AI)
+Other: FAISS, vector databases, LLM prompt engineering, MLOps (MLflow, Docker)
+
+Certifications
+- AWS Certified Machine Learning - Specialty (2023)
+- Deep Learning Specialization, DeepLearning.AI (2020)
+
+Contact
+priya.sharma@example.com | linkedin.com/in/priyasharma-ds

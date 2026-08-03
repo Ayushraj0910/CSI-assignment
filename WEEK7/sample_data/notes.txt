@@ -1,0 +1,35 @@
+Meeting Notes: Q3 Knowledge Assistant Project
+
+Date: 14 July 2026
+Attendees: Priya Sharma (Data Science), Rohan Verma (Product), Aisha Khan (Engineering)
+
+Context
+The compliance team currently searches through ~40 internal PDF policy
+documents manually, which takes analysts 30-45 minutes per query on
+average. We are building an internal RAG-based Q&A assistant to cut this
+down.
+
+Decisions
+1. Chunk size: after experimenting with 400, 800, and 1200 characters, the
+   team settled on 800-character chunks with 120-character overlap as the
+   best trade-off between retrieval precision and answer completeness.
+2. Embedding model: we will start with an open-source sentence-embedding
+   model (384-dim) for cost reasons, and revisit larger models if recall
+   on the validation question set is below 85%.
+3. Vector store: FAISS was chosen over a managed vector DB for the pilot
+   because the corpus is small (~5,000 chunks) and FAISS can run
+   in-process with no extra infrastructure.
+4. Hybrid search: BM25 keyword search will run alongside vector search
+   because several compliance queries reference exact clause numbers
+   (e.g. "Section 4.2.1") that dense embeddings alone tend to miss.
+5. Re-ranking: a cross-encoder re-ranker will be added in phase 2 once we
+   have a labeled evaluation set to measure whether it actually improves
+   top-1 accuracy over the fused retrieval score.
+
+Action Items
+- Aisha: stand up the ingestion + chunking pipeline by July 25.
+- Priya: benchmark embedding models on the internal validation question set.
+- Rohan: collect 50 real analyst questions with gold-answer citations for
+  evaluation.
+
+Next Review: 28 July 2026

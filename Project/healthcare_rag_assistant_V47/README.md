@@ -242,6 +242,7 @@ GROQ_API_KEY=your_api_key_here
 ```
 
 Do not upload or share your actual API key publicly.
+Refer to my "How To Run!!" txt file for the api key for easy execution...
 
 ---
 

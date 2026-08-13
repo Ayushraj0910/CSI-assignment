@@ -1,0 +1,24 @@
+HEALTHCARE ASSISTANT - QUICK START
+
+1. Double-click: Run Healthcare Assistant.bat
+2. Wait for Streamlit to start.
+3. Your browser will open automatically.
+
+The first run may take a few minutes while Python packages are installed.
+After that, startup will be much faster.
+
+2nd METHOD
+
+1. Open the folder in Terminal.
+2. Run the following command 
+
+pip install -r requirements.txt
+streamlit run app.py
+
+on the left side , it requires an API key , you can create one from 
+: https://console.groq.com/
+create an accounf , then create an api key and enter that on the dashboard of healthcare Assistant
+
+or 
+
+you can use my API : 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

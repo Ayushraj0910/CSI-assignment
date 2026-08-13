@@ -1,0 +1,8 @@
+HEALTHCARE ASSISTANT - QUICK START
+
+1. Double-click: Run Healthcare Assistant.bat
+2. Wait for Streamlit to start.
+3. Your browser will open automatically.
+
+The first run may take a few minutes while Python packages are installed.
+After that, startup will be much faster.

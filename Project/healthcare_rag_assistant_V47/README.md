@@ -197,21 +197,11 @@ The batch file checks for the project's virtual environment and required package
 
 The first run may take some time because Python packages need to be installed.
 
-### Option 2 — Run from VS Code
+### Option 2 — Run from Folder
 
-Open the project folder in VS Code.
+Open the project folder in the Terminal
 
-Create a virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-Activate it:
-
-```bash
-.venv\Scripts\activate
-```
+And Run the following commands
 
 Install the required packages:
 
@@ -225,15 +215,7 @@ Start the application:
 streamlit run app.py
 ```
 
-**Important:** Do not run the application using:
 
-```bash
-python app.py
-```
-
-because this is a Streamlit application.
-
----
 
 ## 8. Groq API Key
 
